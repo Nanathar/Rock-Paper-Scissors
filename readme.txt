@@ -1,3 +1,3 @@
-Todo-list
+Rock Paper Scissors
 
-https://nanathar.github.io/Todo-list/index.html
+https://nanathar.github.io/Rock-Paper-Scissors/index.html
