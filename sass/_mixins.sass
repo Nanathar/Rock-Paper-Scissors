@@ -6,11 +6,11 @@
   @if $breakpoint == mobile600-land
     @media (max-width: 600px) and (orientation: landscape)
       @content
-  @if $breakpoint == land-700
-    @media (max-width: 700px) and (orientation: landscape)
+  @if $breakpoint == mobile600h-port
+    @media (min-height: 600px) and (orientation: portrait)
       @content
-  @if $breakpoint == land-900
-    @media (max-width: 900px) and (max-height: 400px)
+  @if $breakpoint == mobile800-land
+    @media (max-width: 800px) and (orientation: landscape)
       @content
   @if $breakpoint == land-1024
     @media (max-width: 1024px) and (orientation: landscape)

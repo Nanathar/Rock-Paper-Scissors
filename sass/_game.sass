@@ -8,6 +8,7 @@
   &__title
     text-transform: uppercase
     font-size: 1.5rem
+    margin-bottom: 5px
   &__p
     font-size: 1.2rem
     &__span
@@ -30,6 +31,7 @@
       // filter: drop-shadow(8px 8px 10px gray)
       margin: 0 10px
     &__btn
+      font-size: 1.3rem
       margin: 20px auto 0
       padding: 3px 0
       width: 70%
@@ -41,9 +43,8 @@
       cursor: pointer
   &__stats,
   &__result
-    width: 230px
+    +heighWidth(100px,230px)
   &__result
     grid-area: result
   &__stats
     grid-area: stats
-

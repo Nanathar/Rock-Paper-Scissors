@@ -8,6 +8,7 @@
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  overflow: hidden;
 }
 
 .game {
@@ -21,6 +22,7 @@
 .game__title--second, .game__title {
   text-transform: uppercase;
   font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 .game__p {
   font-size: 1.2rem;
@@ -52,6 +54,7 @@
   margin: 0 10px;
 }
 .game__choice__btn {
+  font-size: 1.3rem;
   margin: 20px auto 0;
   padding: 3px 0;
   width: 70%;
@@ -63,6 +66,7 @@
   cursor: pointer;
 }
 .game__stats, .game__result {
+  height: 100px;
   width: 230px;
 }
 .game__result {
@@ -74,9 +78,9 @@
 
 @media (max-width: 600px) and (orientation: landscape) {
   .game {
-    height: 400px;
+    height: 300px;
     width: 500px;
-    grid: "title title" 50px "instruction choice" 150px "stats result" 100px/0.8fr 1.5fr;
+    grid: "title title" 50px "instruction choice" 150px "stats result" 90px/0.9fr 1.5fr;
   }
   .game__instruction {
     grid-area: instruction;
@@ -84,5 +88,49 @@
   .game__instruction__img {
     height: 140px;
     width: 160px;
+  }
+  .game__stats {
+    padding-left: 50px;
+  }
+}
+@media (min-height: 600px) and (orientation: portrait) {
+  :root {
+    font-size: 12px;
+  }
+  .game {
+    height: 700px;
+    width: 330px;
+    grid: "title" 70px "instruction" 180px "choice" 200px "result" 90px "stats" 90px/1fr;
+  }
+  .game__choice {
+    padding-bottom: 20px;
+  }
+  .game__choice__img {
+    height: 75px;
+    width: 75px;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  :root {
+    font-size: 12px;
+  }
+  .game {
+    height: 300px;
+    width: 600px;
+    grid: "title title" 60px "instruction choice" 170px "stats result" 110px/0.8fr 1.5fr;
+  }
+  .game__instruction {
+    grid-area: instruction;
+  }
+  .game__instruction__img {
+    height: 140px;
+    width: 160px;
+  }
+  .game__choice__img {
+    height: 70px;
+    width: 70px;
+  }
+  .game__stats {
+    padding-left: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
