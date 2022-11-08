@@ -4,9 +4,10 @@
   display: grid
   height: 500px
   width: 300px
-  grid: 'title' 50px 'instruction' 100px 'choice' 100px 'result' 100px 'stats' 100px / 1fr
+  grid: 'title' 50px 'instruction' 100px 'choice' 150px 'result' 100px 'stats' 100px / 1fr
   place-items: center
   &__section
+
   &__title
     text-transform: uppercase
     font-size: 1.5rem
@@ -18,10 +19,15 @@
       width: 100px
   &__choice
     grid-area: choice
+    display: flex
+    flex-direction: column
     &__img
       height: 65px
       width: 65px
       margin: 0 10px
+    &__btn
+      margin: 15px auto 0
+      width: 60%
   &__result
     grid-area: result
   &__stats
