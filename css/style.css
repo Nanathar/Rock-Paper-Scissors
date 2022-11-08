@@ -8,11 +8,15 @@
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
-  overflow: hidden;
 }
 
 .game {
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1024px;
   display: grid;
   height: 500px;
   width: 280px;
@@ -34,6 +38,7 @@
 }
 .game__title {
   grid-area: title;
+  font-size: 1.5rem;
 }
 .game__instruction {
   grid-area: instruction;
@@ -102,6 +107,10 @@
     width: 330px;
     grid: "title" 70px "instruction" 180px "choice" 200px "result" 90px "stats" 90px/1fr;
   }
+  .game__title {
+    padding-top: 40px;
+    font-size: 1.6rem;
+  }
   .game__choice {
     padding-bottom: 20px;
   }
@@ -162,73 +171,89 @@
 }
 @media (min-width: 801px) and (max-width: 1023px) and (orientation: landscape) {
   :root {
-    font-size: 13px;
+    font-size: 15px;
   }
   .game {
-    height: 400px;
-    width: 950px;
-    grid: "title title" 60px "instruction choice" 170px "stats result" 110px/400px 400px;
+    height: 600px;
+    width: 1000px;
+    grid: "title title" 100px "instruction choice" 200px "stats result" 200px/300px 500px;
     place-content: center;
   }
+  .game__title {
+    font-size: 1.8rem;
+  }
   .game__instruction__img {
-    height: 170px;
-    width: 190px;
+    height: 220px;
+    width: 250px;
   }
   .game__choice__img {
-    height: 90px;
-    width: 90px;
+    height: 125px;
+    width: 125px;
   }
   .game__stats {
     padding-left: 50px;
   }
 }
-@media (min-height: 1024px) and (orientation: portrait) {
+@media (min-width: 800px) and (max-height: 450px) and (orientation: landscape) {
   :root {
-    font-size: 20px;
+    font-size: 15px;
   }
   .game {
-    height: 970px;
-    width: 700px;
-    grid: "title" 70px "instruction" 300px "choice" 300px "result" 150px "stats" 150px/1fr;
+    height: 440px;
+    width: 800px;
+    grid: "title title title" 50px "instruction choice choice " 200px " result result stats" 150px/1fr 0.5fr 0.5fr;
   }
   .game__instruction__img {
-    height: 250px;
-    width: 250px;
+    height: 120px;
+    width: 150px;
   }
   .game__choice {
     padding-bottom: 20px;
   }
   .game__choice__img {
-    height: 150px;
-    width: 150px;
+    height: 80px;
+    width: 80px;
   }
   .game__choice__btn {
     font-size: 1.5rem;
-    margin-top: 35px;
+    margin-top: 25px;
   }
   .game__stats, .game__result {
     height: 100px;
     width: 300px;
   }
+  .game__stats {
+    margin-right: 50px;
+    margin-bottom: 10px;
+  }
 }
-@media (min-width: 1024px) and (max-height: 400px) and (orientation: landscape) {
+@media (min-width: 1024px) and (orientation: landscape) {
   :root {
-    font-size: 13px;
+    font-size: 20px;
   }
   .game {
-    height: 290px;
-    width: 1000px;
-    grid: "title title title title" 50px "instruction choice stats result" 240px/250px 250px 250px 250px;
+    height: 700px;
+    width: 1024px;
+    grid: "title title" 120px "instruction choice" 280px "stats result" 250px/412px 612px;
+    place-content: center;
+    max-height: 1024px;
+    margin: 0 auto;
+  }
+  .game__title {
+    font-size: 2rem;
   }
   .game__instruction__img {
-    height: 170px;
-    width: 190px;
+    height: 250px;
+    width: 270px;
   }
   .game__choice__img {
-    height: 60px;
-    width: 60px;
+    height: 150px;
+    width: 150px;
   }
   .game__stats {
     padding-left: 50px;
+  }
+  .game__result, .game__stats {
+    width: 300px;
   }
 }/*# sourceMappingURL=style.css.map */

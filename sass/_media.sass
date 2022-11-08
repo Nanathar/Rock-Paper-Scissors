@@ -15,6 +15,9 @@
   .game
     +heighWidth(700px,330px)
     grid: 'title' 70px 'instruction' 180px 'choice' 200px 'result' 90px 'stats' 90px / 1fr
+    &__title
+      padding-top: 40px
+      font-size: 1.6rem
     &__choice
       padding-bottom: 20px
       &__img
@@ -57,51 +60,64 @@
 
 +mq(mobile1024-land)
   :root
-    font-size: 13px
+    font-size: 15px
   .game
-    +heighWidth(400px,950px)
-    grid: 'title title' 60px 'instruction choice' 170px 'stats result' 110px / 400px 400px
+    +heighWidth(600px,1000px)
+    grid: 'title title' 100px 'instruction choice' 200px 'stats result' 200px / 300px 500px
     place-content: center
+    &__title
+      font-size: 1.8rem
     &__instruction
       &__img
-        +heighWidth(170px,190px)
+        +heighWidth(220px,250px)
     &__choice
       &__img
-        +heighWidth(90px,90px)
+        +heighWidth(125px,125px)
     &__stats
       padding-left: 50px
 
-+mq(mobile1024-port)
++mq(mobile800-land-height-450px)
   :root
-    font-size: 20px
+    font-size: 15px
   .game
-    +heighWidth(970px,700px)
-    grid: 'title' 70px 'instruction' 300px 'choice' 300px 'result' 150px 'stats' 150px / 1fr
+    +heighWidth(440px,800px)
+    grid: 'title title title' 50px 'instruction choice choice ' 200px ' result result stats' 150px / 1fr 0.5fr 0.5fr
     &__instruction
       &__img
-        +heighWidth(250px,250px)
+        +heighWidth(120px,150px)
     &__choice
       padding-bottom: 20px
       &__img
-        +heighWidth(150px,150px)
+        +heighWidth(80px,80px)
       &__btn
         font-size: 1.5rem
-        margin-top: 35px
+        margin-top: 25px
     &__stats,
     &__result
       +heighWidth(100px,300px)
+    &__stats
+      margin-right: 50px
+      margin-bottom: 10px
 
-+mq(deskt1024-land-height400)
++mq(deskt1024-land)
   :root
-    font-size: 13px
+    font-size: 20px
   .game
-    +heighWidth(290px,1000px)
-    grid: 'title title title title' 50px 'instruction choice stats result' 240px / 250px 250px 250px 250px
+    +heighWidth(700px,1024px)
+    grid: 'title title' 120px 'instruction choice' 280px 'stats result' 250px / 412px 612px
+    place-content: center
+    max-height: 1024px
+    margin: 0 auto
+    &__title
+      font-size: 2rem
     &__instruction
       &__img
-        +heighWidth(170px,190px)
+        +heighWidth(250px,270px)
     &__choice
       &__img
-        +heighWidth(60px,60px)
+        +heighWidth(150px,150px)
     &__stats
       padding-left: 50px
+    &__result,
+    &__stats
+      width: 300px

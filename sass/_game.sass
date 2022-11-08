@@ -1,6 +1,10 @@
 .game
   margin: 0 auto
-  max-wid
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  max-width: 1024px
   display: grid
   +heighWidth(500px,280px)
   grid: 'title' 40px 'instruction' 140px 'choice' 140px 'result' 80px 'stats' 80px / 1fr
@@ -18,6 +22,7 @@
       font-style: italic
   &__title
     grid-area: title
+    font-size: 1.5rem
   &__instruction
     grid-area: instruction
     &__img
