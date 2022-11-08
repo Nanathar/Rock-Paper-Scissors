@@ -3,7 +3,7 @@
   width: $width
 
 =mq($breakpoint)
-  @if $breakpoint == phone-first
+  @if $breakpoint == mobile600-land
     @media (max-width: 600px) and (orientation: landscape)
       @content
   @if $breakpoint == land-700

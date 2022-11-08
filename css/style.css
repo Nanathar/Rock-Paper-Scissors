@@ -70,4 +70,19 @@
 }
 .game__stats {
   grid-area: stats;
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .game {
+    height: 400px;
+    width: 500px;
+    grid: "title title" 50px "instruction choice" 150px "stats result" 100px/0.8fr 1.5fr;
+  }
+  .game__instruction {
+    grid-area: instruction;
+  }
+  .game__instruction__img {
+    height: 140px;
+    width: 160px;
+  }
 }/*# sourceMappingURL=style.css.map */
