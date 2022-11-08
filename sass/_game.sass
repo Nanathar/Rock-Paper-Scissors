@@ -1,0 +1,28 @@
+
+.game
+  margin: 0 auto
+  display: grid
+  height: 500px
+  width: 300px
+  grid: 'title' 50px 'instruction' 100px 'choice' 100px 'result' 100px 'stats' 100px / 1fr
+  place-items: center
+  &__section
+  &__title
+    text-transform: uppercase
+    font-size: 1.5rem
+    grid-area: title
+  &__instruction
+    grid-area: instruction
+    &__img
+      height: 100px
+      width: 100px
+  &__choice
+    grid-area: choice
+    &__img
+      height: 65px
+      width: 65px
+      margin: 0 10px
+  &__result
+    grid-area: result
+  &__stats
+    grid-area: stats

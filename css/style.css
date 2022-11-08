@@ -1,1 +1,45 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game {
+  margin: 0 auto;
+  display: grid;
+  height: 500px;
+  width: 300px;
+  grid: "title" 50px "instruction" 100px "choice" 100px "result" 100px "stats" 100px/1fr;
+  place-items: center;
+}
+.game__title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  grid-area: title;
+}
+.game__instruction {
+  grid-area: instruction;
+}
+.game__instruction__img {
+  height: 100px;
+  width: 100px;
+}
+.game__choice {
+  grid-area: choice;
+}
+.game__choice__img {
+  height: 65px;
+  width: 65px;
+  margin: 0 10px;
+}
+.game__result {
+  grid-area: result;
+}
+.game__stats {
+  grid-area: stats;
+}/*# sourceMappingURL=style.css.map */
