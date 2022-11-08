@@ -70,3 +70,38 @@
         +heighWidth(90px,90px)
     &__stats
       padding-left: 50px
+
++mq(mobile1024-port)
+  :root
+    font-size: 20px
+  .game
+    +heighWidth(970px,700px)
+    grid: 'title' 70px 'instruction' 300px 'choice' 300px 'result' 150px 'stats' 150px / 1fr
+    &__instruction
+      &__img
+        +heighWidth(250px,250px)
+    &__choice
+      padding-bottom: 20px
+      &__img
+        +heighWidth(150px,150px)
+      &__btn
+        font-size: 1.5rem
+        margin-top: 35px
+    &__stats,
+    &__result
+      +heighWidth(100px,300px)
+
++mq(deskt1024-land-height400)
+  :root
+    font-size: 13px
+  .game
+    +heighWidth(290px,1000px)
+    grid: 'title title title title' 50px 'instruction choice stats result' 240px / 250px 250px 250px 250px
+    &__instruction
+      &__img
+        +heighWidth(170px,190px)
+    &__choice
+      &__img
+        +heighWidth(60px,60px)
+    &__stats
+      padding-left: 50px

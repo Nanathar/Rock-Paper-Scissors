@@ -16,8 +16,11 @@
     @media (min-height: 800px) and (max-height:1023px) and (orientation: portrait)
       @content
   @if $breakpoint == mobile1024-land
-    @media (min-width: 801px) and (max-width: 1024px) and (orientation: landscape)
+    @media (min-width: 801px) and (max-width: 1023px) and (orientation: landscape)
       @content
-  @if $breakpoint == deskt1024-land
-    @media (min-width: 1024px) and (orientation: landscape)
+  @if $breakpoint == mobile1024-port
+    @media (min-height: 1024px) and (orientation: portrait)
+      @content
+  @if $breakpoint == deskt1024-land-height400
+    @media (min-width: 1024px) and (max-height: 400px) and (orientation: landscape)
       @content
