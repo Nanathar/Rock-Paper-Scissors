@@ -11,12 +11,12 @@
 
 <body>
   <div class="game">
-    <h1 class="game__section game__title">Game: Rock - Paper - Scissors</h1>
-    <section class="game__section game__instruction">
+    <h1 class="game__title">Game: Rock - Paper - Scissors</h1>
+    <section class="game__instruction">
       <img class="game__instruction__img" src="/img/Rock-Paper-Scissors.png" alt="">
     </section>
 
-    <section class="game__section game__choice">
+    <section class="game__choice">
       <div>
         <img class="game__choice__img" src="/img/Rock.PNG" alt="">
         <img class="game__choice__img" src="/img/Paper.PNG" alt="">
@@ -25,12 +25,21 @@
       <button class="game__choice__btn">Start Game</button>
     </section>
 
-    <section class="game__section game__result">
-
+    <section class="game__result">
+      <h2 class="game__title--second">Game result</h2>
+      <p class="game__p">Your choice: <span class=" game__p__span player-hand" data-summary="your-choice"> KAMIEŃ
+        </span></p>
+      <p class="game__p">Ai choice <span class=" game__p__span ai-hand" data-summary="ai-choice"> NOŻYCZKI</span></p>
+      <p class="game__p">Game winner: <span class=" game__p__span result" data-summary="who-win">PLAYER WIN !!!</span>
+      </p>
     </section>
 
-    <section class="game__section game__stats">
-
+    <section class="game__stats">
+      <h2 class="game__title--second">Statistics</h2>
+      <p class="game__p" class="numbers">Number of games: <span class="game__p__span">0</span></p>
+      <p class="game__p" class="wins">Won: <span class="game__p__span">0</span></p>
+      <p class="game__p" class="losses">Lose: <span class="game__p__span">0</span></p>
+      <p class="game__p" class="draws">Draw: <span class="game__p__span">0</span></p>
     </section>
   </div>
 

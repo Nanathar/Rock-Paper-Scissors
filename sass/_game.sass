@@ -1,33 +1,47 @@
-
 .game
   margin: 0 auto
   display: grid
-  height: 500px
-  width: 300px
-  grid: 'title' 50px 'instruction' 100px 'choice' 150px 'result' 100px 'stats' 100px / 1fr
+  +heighWidth(500px,300px)
+  grid: 'title' 50px 'instruction' 150px 'choice' 150px 'result' 80px 'stats' 80px / 1fr
   place-items: center
-  &__section
-
+  &__title--second,
   &__title
     text-transform: uppercase
     font-size: 1.5rem
+  &__p
+    font-size: 1.2rem
+    &__span
+      font-size: 1rem
+      font-weight: bold
+      font-style: italic
+  &__title
     grid-area: title
   &__instruction
     grid-area: instruction
     &__img
-      height: 100px
-      width: 100px
+      +heighWidth(160px,180px)
   &__choice
     grid-area: choice
     display: flex
     flex-direction: column
     &__img
-      height: 65px
-      width: 65px
+      +heighWidth(60px,60px)
+      cursor: pointer
+      // filter: drop-shadow(8px 8px 10px gray)
       margin: 0 10px
     &__btn
-      margin: 15px auto 0
-      width: 60%
+      margin: 20px auto 0
+      padding: 3px 0
+      width: 70%
+      text-transform: uppercase
+      font-weight: bold
+      border: solid 2px black
+      background-color: transparent
+      border-radius: 25px
+      cursor: pointer
+  &__stats,
+  &__result
+    width: 230px
   &__result
     grid-area: result
   &__stats
