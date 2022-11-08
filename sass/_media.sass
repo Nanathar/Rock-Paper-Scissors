@@ -9,7 +9,7 @@
     &__stats
       padding-left: 50px
 
-+mq(mobile600h-port)
++mq(mobile600-port)
   :root
     font-size: 12px
   .game
@@ -24,14 +24,49 @@
   :root
     font-size: 12px
   .game
-    +heighWidth(300px,600px)
+    +heighWidth(300px,700px)
     grid: 'title title' 60px 'instruction choice' 170px 'stats result' 110px / 0.8fr 1.5fr
     &__instruction
-      grid-area: instruction
       &__img
         +heighWidth(140px,160px)
     &__choice
       &__img
         +heighWidth(70px,70px)
+    &__stats
+      padding-left: 50px
+
++mq(mobile800-port)
+  :root
+    font-size: 15px
+  .game
+    +heighWidth(700px,420px)
+    grid: 'title' 50px 'instruction' 200px 'choice' 220px 'result' 150px 'stats' 120px / 1fr
+    &__instruction
+      &__img
+        +heighWidth(190px,220px)
+    &__choice
+      padding-bottom: 20px
+      &__img
+        +heighWidth(110px,110px)
+      &__btn
+        font-size: 1.5rem
+        margin-top: 35px
+    &__stats,
+    &__result
+      +heighWidth(100px,300px)
+
++mq(mobile1024-land)
+  :root
+    font-size: 13px
+  .game
+    +heighWidth(400px,950px)
+    grid: 'title title' 60px 'instruction choice' 170px 'stats result' 110px / 400px 400px
+    place-content: center
+    &__instruction
+      &__img
+        +heighWidth(170px,190px)
+    &__choice
+      &__img
+        +heighWidth(90px,90px)
     &__stats
       padding-left: 50px
