@@ -14,6 +14,8 @@ divGame.addEventListener('click', (event) => {
   }
 })
 
+
+// Gra
 const btnStart = document.querySelector('.game__choice__btn')
 
 const rock = document.querySelector('[data-option="rock"]')
@@ -29,13 +31,28 @@ let win = 0;
 let lose = 0;
 let draw = 0;
 
+// wybór gracza
+const playerChoice = () => {
+  if (rock.classList.value === 'game__choice__img game__choice__img--active') {
+    game.playerHand = 'rock'
+  } else if (paper.classList.value === 'game__choice__img game__choice__img--active') {
+    game.playerHand = 'paper'
+  } else if (scissors.classList.value === 'game__choice__img game__choice__img--active') {
+    game.playerHand = 'scissors'
+  }
+}
+
+// wybór komputera
+const aiChoice = () => {
+}
+
 
 const startGame = (event) => {
   if (rock.classList.value !== 'game__choice__img game__choice__img--active' && paper.classList.value !== 'game__choice__img game__choice__img--active' && scissors.classList.value !== 'game__choice__img game__choice__img--active') {
     alert('Choose a hand')
-    console.log('ok')
   }
-
+  playerChoice()
+  aiChoice()
 
 }
 
