@@ -44,6 +44,16 @@ const playerChoice = () => {
 
 // wybór komputera
 const aiChoice = () => {
+  let x
+  x = Math.floor(Math.random() * 3)
+  if (x === 0) {
+    game.aiHand = 'rock'
+  } else if (x === 1) {
+    game.aiHand = 'paper'
+  } else if (x === 2) {
+    game.aiHand = 'scissors'
+  }
+
 }
 
 
