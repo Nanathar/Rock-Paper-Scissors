@@ -3,7 +3,7 @@ window.addEventListener('click', (e) => {
 })
 
 // Obramowanie wybóru 
-const divGame = document.querySelector('.game__choice div')
+const divGame = document.querySelector('.game__choice div');
 
 divGame.addEventListener('click', (event) => {
   if (event.target.tagName === 'IMG' && event.target.classList.value !== 'game__choice__img game__choice__img--active') {
@@ -16,21 +16,28 @@ divGame.addEventListener('click', (event) => {
 
 
 // Gra
-const btnStart = document.querySelector('.game__choice__btn')
+const btnStart = document.querySelector('.game__choice__btn');
 
-const rock = document.querySelector('[data-option="rock"]')
-const paper = document.querySelector('[data-option="paper"]')
-const scissors = document.querySelector('[data-option="scissors"]')
+const rock = document.querySelector('[data-option="rock"]');
+const paper = document.querySelector('[data-option="paper"]');
+const scissors = document.querySelector('[data-option="scissors"]');
 
-const spanPlayer = document.querySelector('[data-summary="your-choice"]')
-const spanAi = document.querySelector('[data-summary="ai-choice"]')
-const spanWinner = document.querySelector('[data-summary="who-win"]')
+const spanPlayer = document.querySelector('[data-summary="your-choice"]');
+const spanAi = document.querySelector('[data-summary="ai-choice"]');
+const spanWinner = document.querySelector('[data-summary="who-win"]');
 
 const game = {
   playerHand: '',
   aiHand: '',
 }
 
+const statsNumbers = document.querySelector('.numbers');
+const statsWins = document.querySelector('.wins');
+const statsLosses = document.querySelector('.losses');
+const statsDraws = document.querySelector('.draws');
+
+
+let games = 0;
 let win = 0;
 let lose = 0;
 let draw = 0;
@@ -80,15 +87,31 @@ const gameResult = () => {
   }
 }
 
+//statystyki 
+const stats = () => {
+  if (spanWinner.textContent === 'DRAW') {
+    draw++
+    statsDraws.textContent = draw
+  } else if (spanWinner.textContent === 'WIN') {
+    win++
+    statsWins.textContent = win
+  } else if (spanWinner.textContent === 'LOSE') {
+    lose++
+    statsLosses.textContent = lose
+  }
+  statsNumbers.textContent = draw + win + lose
+}
 
 const startGame = (event) => {
   if (rock.classList.value !== 'game__choice__img game__choice__img--active' && paper.classList.value !== 'game__choice__img game__choice__img--active' && scissors.classList.value !== 'game__choice__img game__choice__img--active') {
     alert('Choose a hand')
     return
   }
+
   playerChoice()
   aiChoice()
   gameResult()
+  stats()
 
   document.querySelectorAll('.game__choice div img').forEach(img => img.classList.remove('game__choice__img--active'))
   event.target.classList.remove('game__choice__img--active');

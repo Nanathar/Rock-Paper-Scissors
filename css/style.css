@@ -73,6 +73,10 @@
   border-radius: 25px;
   cursor: pointer;
 }
+.game__choice__btn:hover {
+  background-color: black;
+  color: white;
+}
 .game__stats, .game__result {
   height: 100px;
   width: 230px;
